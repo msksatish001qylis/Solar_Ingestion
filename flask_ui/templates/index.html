@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solr Search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .welcome-header {
+            font-weight: 700;
+            color: black;
+            margin-bottom: 30px; /* Space below the welcome header */
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+            margin-top: 20px;
+            margin-bottom: 100px;
+        }
+        .search-title {
+            color: black;
+        }
+        .solr-title {
+            color: red;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 250px;
+            color: black;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+            max-width: 150px;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="welcome-header">Welcome to <span style="color: #1a0dab;">Qylis</span></h1> <!-- Header with Qylis color -->
+    <div class="container">
+        <h2>
+            <span class="search-title">Search </span>
+            <span class="solr-title">Solr</span>
+        </h2>
+        <form action="/search" method="post">
+            <input type="text" name="query" placeholder="Enter search term..." required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>
