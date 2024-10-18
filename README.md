@@ -12,7 +12,7 @@ This project demonstrates the setup and utilization of Apache Solr as a search e
 ## Getting Started
 
 ### Prerequisites
-- Python 3.x
+- Python 3.9
 - Flask
 - Apache Solr 8.11.4
 - Required Python packages (requests, etc.)
